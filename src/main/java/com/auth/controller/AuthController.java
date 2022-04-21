@@ -22,9 +22,9 @@ import com.auth.service.UserService;
 
 
 @Slf4j
-@CrossOrigin(origins = "*")
 @RestController
 @EnableHystrix
+@CrossOrigin
 public class AuthController {
 
     @Autowired

@@ -31,7 +31,7 @@ public class JwtUtilTest {
     Claims claim;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         MockitoAnnotations.initMocks(this);
         userdetails = new User("admin", "admin", new ArrayList<>());
     }

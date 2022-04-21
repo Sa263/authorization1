@@ -9,15 +9,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 @SpringBootTest
-class AuthResponseTest {
+ public class AuthResponseTest {
 
     @InjectMocks
     AuthResponse response;
 
     @Test
-    void getterSetterTest() {
+   public  void getterSetterTest() {
         response.setUsername("sanchit");
         response.setRole("admin");
         response.setValid(true);
@@ -28,13 +28,13 @@ class AuthResponseTest {
     }
 
     @Test
-    void noArgsConstructorTest() {
+   public  void noArgsConstructorTest() {
         response = new AuthResponse();
         assertNotNull(response);
     }
 
     @Test
-    void allArgsConstructorTest() {
+   public  void allArgsConstructorTest() {
         response = new AuthResponse("name", "admin", true);
         assertNotNull(response);
         assertEquals("name", response.getUsername());

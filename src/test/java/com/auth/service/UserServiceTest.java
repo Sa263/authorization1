@@ -40,13 +40,13 @@ class UserServiceTest {
     UserLoginCredential credentials;
 
     @BeforeEach
-    void serUp() {
+   public  void serUp() {
         user = new UserEntity(1,"name", "pass", "admin");
         credentials = new UserLoginCredential("name", "pass");
     }
 
     @Test
-    void loginTest() throws UserNotFoundException {
+    public void loginTest() throws UserNotFoundException {
         UserDetails value = new User(user.getUsername(), user.getPassword(), new ArrayList<>());
         Mockito.when(repo.findByUsername("name")).thenReturn(user);
         Mockito.when(custService.loadUserByUsername("name")).thenReturn(value);
@@ -55,13 +55,13 @@ class UserServiceTest {
     }
 
     @Test
-    void loginFailTest() throws UserNotFoundException {
+     public void loginFailTest() throws UserNotFoundException {
         Mockito.when(repo.findByUsername("name")).thenReturn(null);
         assertThrows(UserNotFoundException.class, () -> service.login(credentials));
     }
 
     @Test
-    void validateTest() {
+   public  void validateTest() {
         Mockito.when(util.extractUsername(TOKEN)).thenReturn("name");
         Mockito.when(repo.findById("name")).thenReturn(Optional.of(user));
         assertNotNull(service.validate("Bearer " + TOKEN));

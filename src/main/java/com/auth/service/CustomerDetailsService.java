@@ -20,9 +20,12 @@ public class CustomerDetailsService implements UserDetailsService {
     private UserRepository userDao;
 
 
+
+
     @Override
     public UserDetails loadUserByUsername(String username) {
         UserEntity user = userDao.findByUsername(username);
+
         return new User(user.getUsername(), user.getPassword(), new ArrayList<>());
     }
 

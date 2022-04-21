@@ -1,6 +1,6 @@
 package com.auth;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -12,6 +12,9 @@ class AuthApplicationTests {
 
     @Test
     void contextLoads() {
-        AuthApplication.main(new String[] {});
+        AuthApplicationTests.main(new String[] {});
+    }
+
+    static void main(String[] strings) {
     }
 }

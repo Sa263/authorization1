@@ -18,6 +18,7 @@ public class UserEntity {
     @Id
     private long id;
 
+
     private String username;
 
     private String password;

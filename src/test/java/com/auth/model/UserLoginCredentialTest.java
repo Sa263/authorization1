@@ -8,15 +8,15 @@ import org.mockito.InjectMocks;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 @SpringBootTest
-class UserLoginCredentialTest {
+ public class UserLoginCredentialTest {
 
     @InjectMocks
     UserLoginCredential credentials;
 
     @Test
-    void getterSetterTest() {
+   public  void getterSetterTest() {
         credentials.setUsername("admin");
         credentials.setPassword("pass");
         assertEquals("admin", credentials.getUsername());
@@ -24,13 +24,13 @@ class UserLoginCredentialTest {
     }
 
     @Test
-    void noArgsConstructorTest() {
+   public  void noArgsConstructorTest() {
         credentials = new UserLoginCredential();
         assertNotNull(credentials);
     }
 
     @Test
-    void allArgsConstructorTest() {
+   public  void allArgsConstructorTest() {
         credentials = new UserLoginCredential("admin", "pass");
         assertNotNull(credentials);
         assertEquals("admin", credentials.getUsername());

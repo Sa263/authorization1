@@ -9,15 +9,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 @SpringBootTest
-class UserTokenTest {
+ public class UserTokenTest {
 
     @InjectMocks
     UserToken token;
 
     @Test
-    void getterSetterTest() {
+   public  void getterSetterTest() {
         token.setAuthToken("token");
 
         token.setUsername("name");
@@ -29,13 +29,13 @@ class UserTokenTest {
     }
 
     @Test
-    void noArgsConstructorTest() {
+   public  void noArgsConstructorTest() {
         token = new UserToken();
         assertNotNull(token);
     }
 
     @Test
-    void allArgsContructorTest() {
+    public void allArgsContructorTest() {
         token = new UserToken("name", "token", "admin");
         assertNotNull(token);
         assertEquals("token", token.getAuthToken());

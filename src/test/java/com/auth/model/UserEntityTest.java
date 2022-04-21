@@ -5,13 +5,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 
-class UserEntityTest {
+ public class UserEntityTest {
 
     @InjectMocks
     UserEntity user;
 
     @Test
-    void getterSetterTest() {
+   public void getterSetterTest() {
         user = new UserEntity();
 
         user.setPassword("pass");
@@ -24,13 +24,13 @@ class UserEntityTest {
     }
 
     @Test
-    void noArgsConstructorTest() {
+   public  void noArgsConstructorTest() {
         user = new UserEntity();
         assertNotNull(user);
     }
 
     @Test
-    void allArgsCOnstructor() {
+   public  void allArgsCOnstructor() {
         user = new UserEntity(1,"admin", "pass", "admin");
         assertEquals("pass", user.getPassword());
         assertEquals("admin", user.getUsername());
