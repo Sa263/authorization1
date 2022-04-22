@@ -36,7 +36,7 @@ public class AuthController {
 
     public int check() {
         log.info("Health method");
-        return 200;
+        return 201;
     }public int check_fail()  { return 404;}
 
 
